@@ -1,0 +1,101 @@
+Command: /home/MainUser/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/MainUser/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /home/MainUser/Documents/Projects/McHacks_2026/esp_main/build/McHacks.elf /home/MainUser/Documents/Projects/McHacks_2026/esp_main/build/bootloader/bootloader.elf -m '/home/MainUser/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/MainUser/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyACM0'
+[0;32mI (224) esp_image: segment 4: paddr=000c9cd0 vaddr=4037b254 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037ea42
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jan 17 2026 12:51:24[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (32) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=24e58h (151128) map[0m
+[0;32mI (113) esp_image: segment 1: paddr=00034e80 vaddr=3fc9c500 size=03f3ch ( 16188) load[0m
+[0;32mI (117) esp_image: segment 2: paddr=00038dc4 vaddr=40374000 size=07254h ( 29268) load[0m
+[0;32mI (124) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=89ca8h (564392) map[0m
+[0;32mI (224) esp_image: segment 4: paddr=000c9cd0 vaddr=4037b254 size=111bch ( 70076) load[0m
+[0;32mI (240) esp_image: segment 5: paddr=000dae94 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (250) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (250) boot: Disabling RNG early entropy source...[0m
+[0;32mI (260) cpu_start: Multicore app[0m
+[0;32mI (269) cpu_start: Pro cpu start user code[0m
+[0;32mI (269) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (269) app_init: Application information:[0m
+[0;32mI (269) app_init: Project name:     McHacks[0m
+[0;32mI (273) app_init: App version:      2a12c4b-dirty[0m
+[0;32mI (277) app_init: Compile time:     Jan 17 2026 13:35:35[0m
+[0;32mI (282) app_init: ELF file SHA256:  47f5f56a3...[0m
+[0;32mI (287) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (291) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (295) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (299) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (303) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (309) heap_init: At 3FCA54A0 len 00044270 (272 KiB): RAM[0m
+[0;32mI (314) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (319) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (325) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (331) spi_flash: detected chip: gd[0m
+[0;32mI (333) spi_flash: flash io: dio[0m
+[0;33mW (336) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (349) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (355) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (361) coexist: coex firmware version: b0bcc39[0m
+[0;32mI (366) coexist: coexist rom version e7ae62f[0m
+[0;32mI (370) main_task: Started on CPU0[0m
+[0;32mI (380) main_task: Calling app_main()[0m
+[0;32mI (600) GATTS_SPP_DEMO: db = 13[0m
+[0;32mI (600) uart: queue free spaces: 10[0m
+[0;32mI (610) BLE_INIT: BT controller compile version [2edb0b0][0m
+[0;32mI (610) BLE_INIT: Using main XTAL as clock source[0m
+[0;32mI (610) BLE_INIT: Feature Config, ADV:1, BLE_50:1, DTM:1, SCAN:1, CCA:0, SMP:1, CONNECT:1[0m
+[0;32mI (620) BLE_INIT: Bluetooth MAC: d8:3b:da:49:b8:5e[0m
+[0;32mI (620) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (660) GATTS_SPP_DEMO: server_app_main init bluetooth[0m
+[0;32mI (680) GATTS_SPP_DEMO: GATT server register, status 0, app_id 86, gatts_if 3[0m
+[0;32mI (690) GATTS_SPP_DEMO: The number handle d[0m
+[0;32mI (690) GATTS_SPP_DEMO: Service start, status 0, service_handle 40[0m
+[0;32mI (690) GATTS_SPP_DEMO: Advertising start successfully[0m
+[0;32mI (690) main_task: Returned from app_main()[0m
+[0;32mI (6220) GATTS_SPP_DEMO: Connected, conn_id 0, remote 80:b5:4e:c3:81:7e[0m
+[0;32mI (7620) GATTS_SPP_DEMO: MTU exchange, MTU 512[0m
+[0;32mI (7780) GATTS_SPP_DEMO: SPP data notification enable[0m
+[0;32mI (7860) GATTS_SPP_DEMO: SPP status notification enable[0m
+[0;32mI (7940) Value: g1 42, g2 54492, g3 0, a1 0,  a2 0, a3 0[0m
+[0;32mI (8380) Value: g1 48181, g2 25825, g3 0, a1 0,  a2 0, a3 0[0m
+[0;32mI (8900) Value: g1 6199, g2 5343, g3 0, a1 0,  a2 0, a3 0[0m
+[0;32mI (9380) Value: g1 45111, g2 37089, g3 0, a1 0,  a2 0, a3 0[0m
+[0;32mI (9900) Value: g1 62512, g2 11484, g3 0, a1 0,  a2 0, a3 0[0m
+[0;32mI (10380) Value: g1 44084, g2 11488, g3 0, a1 0,  a2 0, a3 0[0m
+[0;32mI (10900) Value: g1 46, g2 54495, g3 0, a1 0,  a2 0, a3 0[0m
+[0;32mI (11380) Value: g1 37943, g2 21723, g3 0, a1 0,  a2 0, a3 0[0m
+[0;32mI (11900) Value: g1 3128, g2 41180, g3 0, a1 0,  a2 0, a3 0[0m
+[0;32mI (12380) Value: g1 25654, g2 53469, g3 0, a1 0,  a2 0, a3 0[0m
+[0;32mI (12900) Value: g1 42040, g2 26844, g3 0, a1 0,  a2 0, a3 0[0m
+[0;32mI (13380) Value: g1 48184, g2 38108, g3 0, a1 0,  a2 0, a3 0[0m
+[0;32mI (13900) Value: g1 56376, g2 6363, g3 0, a1 0,  a2 0, a3 0[0m
+[0;32mI (14380) Value: g1 60469, g2 52439, g3 0, a1 0,  a2 0, a3 0[0m
+[0;32mI (14900) Value: g1 53293, g2 15578, g3 0, a1 0,  a2 0, a3 0[0m
+[0;32mI (15380) Value: g1 32814, g2 64726, g3 0, a1 0,  a2 0, a3 0[0m
+[0;32mI (15900) Value: g1 34853, g2 1243, g3 0, a1 0,  a2 0, a3 0[0m
+[0;32mI (16380) Value: g1 27892, g2 55523, g3 0, a1 0,  a2 0, a3 0[0m
+[0;32mI (16900) Value: g1 50423, g2 14563, g3 0, a1 0,  a2 0, a3 0[0m
+[0;32mI (17380) Value: g1 30747, g2 60670, g3 0, a1 0,  a2 0, a3 0[0m
+[0;32mI (17900) Value: g1 18652, g2 59633, g3 0, a1 0,  a2 0, a3 0[0m
+[0;32mI (18380) Value: g1 53471, g2 16626, g3 0, a1 0,  a2 0, a3 0[0m
+[0;32mI (18900) Value: g1 34017, g2 53491, g3 0, a1 0,  a2 0, a3 0[0m
+[0;32mI (19380) Value: g1 15586, g2 52468, g3 0, a1 0,  a2 0, a3 0[0m

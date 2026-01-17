@@ -1,0 +1,624 @@
+Command: /home/MainUser/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/MainUser/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /home/MainUser/Documents/Projects/McHacks_2026/esp_main/build/McHacks.elf /home/MainUser/Documents/Projects/McHacks_2026/esp_main/build/bootloader/bootloader.elf -m '/home/MainUser/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/MainUser/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyACM0'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x2b (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037e202
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jan 17 2026 13:27:46[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (32) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (36) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=231b4h (143796) map[0m
+[0;32mI (112) esp_image: segment 1: paddr=000331dc vaddr=3fc9ad00 size=03de0h ( 15840) load[0m
+[0;32mI (116) esp_image: segment 2: paddr=00036fc4 vaddr=40374000 size=09054h ( 36948) load[0m
+[0;32mI (124) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=813e4h (529380) map[0m
+[0;32mI (218) esp_image: segment 4: paddr=000c140c vaddr=4037d054 size=0dc34h ( 56372) load[0m
+[0;32mI (231) esp_image: segment 5: paddr=000cf048 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (240) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (240) boot: Disabling RNG early entropy source...[0m
+[0;32mI (250) cpu_start: Multicore app[0m
+[0;32mI (259) cpu_start: Pro cpu start user code[0m
+[0;32mI (259) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (259) app_init: Application information:[0m
+[0;32mI (260) app_init: Project name:     McHacks[0m
+[0;32mI (263) app_init: App version:      2a12c4b-dirty[0m
+[0;32mI (268) app_init: Compile time:     Jan 17 2026 13:43:07[0m
+[0;32mI (273) app_init: ELF file SHA256:  158e1ec37...[0m
+[0;32mI (277) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (281) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (285) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (289) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (293) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (299) heap_init: At 3FCA28B8 len 00046E58 (283 KiB): RAM[0m
+[0;32mI (304) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (310) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (315) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (321) spi_flash: detected chip: gd[0m
+[0;32mI (323) spi_flash: flash io: dio[0m
+[0;33mW (326) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (339) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (348) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (355) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (361) coexist: coex firmware version: b0bcc39[0m
+[0;32mI (366) coexist: coexist rom version e7ae62f[0m
+[0;32mI (370) main_task: Started on CPU0[0m
+[0;32mI (380) main_task: Calling app_main()[0m
+[0;32mI (380) uart: queue free spaces: 10[0m
+[0;32mI (390) BLE_INIT: BT controller compile version [2edb0b0][0m
+[0;32mI (390) BLE_INIT: Using main XTAL as clock source[0m
+[0;32mI (390) BLE_INIT: Feature Config, ADV:1, BLE_50:1, DTM:1, SCAN:1, CCA:0, SMP:1, CONNECT:1[0m
+[0;32mI (400) BLE_INIT: Bluetooth MAC: 80:b5:4e:c3:81:7e[0m
+[0;32mI (400) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (440) GATTC_SPP_DEMO: client_app_main init bluetooth[0m
+[0;32mI (460) GATTC_SPP_DEMO: register callback[0m
+[0;32mI (460) GATTC_SPP_DEMO: GATT client register, status 0, app_id 0, gattc_if 3[0m
+[0;32mI (460) GATTC_SPP_DEMO: Scanning start successfully[0m
+[0;32mI (480) GATTC_SPP_DEMO: Scan result, device 3a:b1:9f:be:d6:ad, name len 0[0m
+[0;32mI (480) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (480) GATTC_SPP_DEMO: HT[0m
+[0;32mI (520) GATTC_SPP_DEMO: Scan result, device d2:e8:a1:bb:22:04, name len 0[0m
+[0;32mI (520) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (530) GATTC_SPP_DEMO: HT[0m
+[0;32mI (570) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (570) GATTC_SPP_DEMO: HT[0m
+[0;32mI (590) GATTC_SPP_DEMO: Scan result, device 3a:b1:9f:be:d6:ad, name len 0[0m
+[0;32mI (590) GATTC_SPP_DEMO: Scan result, device 75:8d:80:94:cd:e1, name len 0[0m
+[0;32mI (670) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (670) GATTC_SPP_DEMO: Scan result, device 5e:b5:51:50:86:66, name len 0[0m
+[0;32mI (670) GATTC_SPP_DEMO: Scan result, device 59:fd:2c:d1:b3:53, name len 0[0m
+[0;32mI (690) GATTC_SPP_DEMO: Scan result, device d2:e8:a1:bb:22:04, name len 0[0m
+[0;32mI (690) GATTC_SPP_DEMO: Scan result, device de:a3:1d:f8:69:54, name len 0[0m
+[0;32mI (730) GATTC_SPP_DEMO: Scan result, device 18:c3:3e:d6:89:63, name len 0[0m
+[0;32mI (780) GATTC_SPP_DEMO: Scan result, device 63:2f:39:35:19:0e, name len 0[0m
+[0;32mI (790) GATTC_SPP_DEMO: Scan result, device ed:c4:30:a0:5e:14, name len 0[0m
+[0;32mI (790) GATTC_SPP_DEMO: Scan result, device 6f:a0:41:f0:0c:c8, name len 0[0m
+[0;32mI (840) GATTC_SPP_DEMO: Scan result, device 7a:39:d0:46:33:40, name len 0[0m
+[0;32mI (860) GATTC_SPP_DEMO: Scan result, device 75:8d:80:94:cd:e1, name len 0[0m
+[0;32mI (890) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (890) GATTC_SPP_DEMO: HT[0m
+[0;32mI (920) GATTC_SPP_DEMO: Scan result, device d2:e8:a1:bb:22:04, name len 0[0m
+[0;32mI (940) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (940) GATTC_SPP_DEMO: HT[0m
+[0;32mI (960) GATTC_SPP_DEMO: Scan result, device 63:2f:39:35:19:0e, name len 0[0m
+[0;32mI (970) GATTC_SPP_DEMO: Scan result, device f0:b0:62:a8:89:93, name len 0[0m
+[0;32mI (970) GATTC_SPP_DEMO: Scan result, device 6f:a0:41:f0:0c:c8, name len 0[0m
+[0;32mI (980) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (980) GATTC_SPP_DEMO: HT[0m
+[0;32mI (1010) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (1010) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (1010) GATTC_SPP_DEMO: [0m
+[0;32mI (1010) GATTC_SPP_DEMO: Scan result, device c1:3b:02:4d:27:1a, name len 0[0m
+[0;32mI (1030) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (1030) GATTC_SPP_DEMO: HT[0m
+[0;32mI (1030) GATTC_SPP_DEMO: Scan result, device 7a:39:d0:46:33:40, name len 0[0m
+[0;32mI (1060) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (1060) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (1060) GATTC_SPP_DEMO: [0m
+[0;32mI (1070) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (1070) GATTC_SPP_DEMO: HT[0m
+[0;32mI (1110) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (1110) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (1110) GATTC_SPP_DEMO: [0m
+[0;32mI (1110) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (1120) GATTC_SPP_DEMO: HT[0m
+[0;32mI (1160) GATTC_SPP_DEMO: Scan result, device d2:e8:a1:bb:22:04, name len 0[0m
+[0;32mI (1160) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (1160) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (1160) GATTC_SPP_DEMO: [0m
+[0;32mI (1170) GATTC_SPP_DEMO: Scan result, device d2:e8:a1:bb:22:04, name len 0[0m
+[0;32mI (1170) GATTC_SPP_DEMO: Scan result, device 6f:a0:41:f0:0c:c8, name len 0[0m
+[0;32mI (1180) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (1210) GATTC_SPP_DEMO: Scan result, device c1:3b:02:4d:27:1a, name len 0[0m
+[0;32mI (1210) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (1210) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (1210) GATTC_SPP_DEMO: [0m
+[0;32mI (1220) GATTC_SPP_DEMO: Scan result, device 3a:b1:9f:be:d6:ad, name len 0[0m
+[0;32mI (1220) GATTC_SPP_DEMO: Scan result, device 59:fd:2c:d1:b3:53, name len 0[0m
+[0;32mI (1230) GATTC_SPP_DEMO: Scan result, device d2:e8:a1:bb:22:04, name len 0[0m
+[0;32mI (1260) GATTC_SPP_DEMO: Scan result, device f0:b0:62:a8:89:93, name len 0[0m
+[0;32mI (1280) GATTC_SPP_DEMO: Scan result, device d2:e8:a1:bb:22:04, name len 0[0m
+[0;32mI (1310) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (1310) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (1310) GATTC_SPP_DEMO: [0m
+[0;32mI (1320) GATTC_SPP_DEMO: Scan result, device d2:e8:a1:bb:22:04, name len 0[0m
+[0;32mI (1320) GATTC_SPP_DEMO: Scan result, device c1:4c:19:38:7d:6a, name len 0[0m
+[0;32mI (1330) GATTC_SPP_DEMO: Scan result, device 3a:b1:9f:be:d6:ad, name len 0[0m
+[0;32mI (1330) GATTC_SPP_DEMO: Scan result, device 63:2f:39:35:19:0e, name len 0[0m
+[0;32mI (1360) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (1360) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (1360) GATTC_SPP_DEMO: [0m
+[0;32mI (1360) GATTC_SPP_DEMO: Scan result, device f6:87:1a:10:aa:a0, name len 0[0m
+[0;32mI (1360) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (1370) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (1370) GATTC_SPP_DEMO: [0m
+[0;32mI (1380) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (1380) GATTC_SPP_DEMO: HT[0m
+[0;32mI (1400) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (1410) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (1410) GATTC_SPP_DEMO: [0m
+[0;32mI (1410) GATTC_SPP_DEMO: Scan result, device e6:2b:ac:3c:a8:4a, name len 0[0m
+[0;32mI (1410) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (1420) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (1420) GATTC_SPP_DEMO: [0m
+[0;32mI (1430) GATTC_SPP_DEMO: Scan result, device 75:8d:80:94:cd:e1, name len 0[0m
+[0;32mI (1430) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (1440) GATTC_SPP_DEMO: HT[0m
+[0;32mI (1440) GATTC_SPP_DEMO: Scan result, device d2:e8:a1:bb:22:04, name len 0[0m
+[0;32mI (1450) GATTC_SPP_DEMO: Scan result, device 3a:b1:9f:be:d6:ad, name len 0[0m
+[0;32mI (1470) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (1470) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (1470) GATTC_SPP_DEMO: [0m
+[0;32mI (1470) GATTC_SPP_DEMO: Scan result, device 18:c3:3e:d6:89:63, name len 0[0m
+[0;32mI (1480) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (1480) GATTC_SPP_DEMO: HT[0m
+[0;32mI (1480) GATTC_SPP_DEMO: Scan result, device d2:e8:a1:bb:22:04, name len 0[0m
+[0;32mI (1490) GATTC_SPP_DEMO: Scan result, device f6:87:1a:10:aa:a0, name len 0[0m
+[0;32mI (1510) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (1510) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (1510) GATTC_SPP_DEMO: [0m
+[0;32mI (1510) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (1520) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (1520) GATTC_SPP_DEMO: [0m
+[0;32mI (1520) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (1530) GATTC_SPP_DEMO: HT[0m
+[0;32mI (1530) GATTC_SPP_DEMO: Scan result, device 63:2f:39:35:19:0e, name len 0[0m
+[0;32mI (1540) GATTC_SPP_DEMO: Scan result, device f6:87:1a:10:aa:a0, name len 0[0m
+[0;32mI (1560) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (1560) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (1560) GATTC_SPP_DEMO: [0m
+[0;32mI (1560) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (1570) GATTC_SPP_DEMO: HT[0m
+[0;32mI (1570) GATTC_SPP_DEMO: Scan result, device f6:87:1a:10:aa:a0, name len 0[0m
+[0;32mI (1600) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (1610) GATTC_SPP_DEMO: HT[0m
+[0;32mI (1610) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (1610) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (1610) GATTC_SPP_DEMO: [0m
+[0;32mI (1650) GATTC_SPP_DEMO: Scan result, device c1:3b:02:4d:27:1a, name len 0[0m
+[0;32mI (1660) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (1660) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (1660) GATTC_SPP_DEMO: [0m
+[0;32mI (1660) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (1670) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (1670) GATTC_SPP_DEMO: [0m
+[0;32mI (1680) GATTC_SPP_DEMO: Scan result, device f6:87:1a:10:aa:a0, name len 0[0m
+[0;32mI (1690) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (1710) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (1710) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (1710) GATTC_SPP_DEMO: [0m
+[0;32mI (1720) GATTC_SPP_DEMO: Scan result, device d2:e8:a1:bb:22:04, name len 0[0m
+[0;32mI (1750) GATTC_SPP_DEMO: Scan result, device d2:e8:a1:bb:22:04, name len 0[0m
+[0;32mI (1760) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (1760) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (1760) GATTC_SPP_DEMO: [0m
+[0;32mI (1760) GATTC_SPP_DEMO: Scan result, device f6:87:1a:10:aa:a0, name len 0[0m
+[0;32mI (1780) GATTC_SPP_DEMO: Scan result, device 7a:39:d0:46:33:40, name len 0[0m
+[0;32mI (1830) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (1830) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (1830) GATTC_SPP_DEMO: [0m
+[0;32mI (1830) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (1840) GATTC_SPP_DEMO: HT[0m
+[0;32mI (1850) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (1860) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (1860) GATTC_SPP_DEMO: [0m
+[0;32mI (1870) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (1870) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (1870) GATTC_SPP_DEMO: [0m
+[0;32mI (1870) GATTC_SPP_DEMO: Scan result, device f0:b0:62:a8:89:93, name len 0[0m
+[0;32mI (1880) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (1880) GATTC_SPP_DEMO: HT[0m
+[0;32mI (1900) GATTC_SPP_DEMO: Scan result, device d2:e8:a1:bb:22:04, name len 0[0m
+[0;32mI (1910) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (1910) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (1910) GATTC_SPP_DEMO: [0m
+[0;32mI (1910) GATTC_SPP_DEMO: Scan result, device 6f:a0:41:f0:0c:c8, name len 0[0m
+[0;32mI (1920) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (1920) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (1930) GATTC_SPP_DEMO: [0m
+[0;32mI (1930) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (1940) GATTC_SPP_DEMO: HT[0m
+[0;32mI (1950) GATTC_SPP_DEMO: Scan result, device f0:b0:62:a8:89:93, name len 0[0m
+[0;32mI (1960) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (1960) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (1960) GATTC_SPP_DEMO: [0m
+[0;32mI (1970) GATTC_SPP_DEMO: Scan result, device f6:87:1a:10:aa:a0, name len 0[0m
+[0;32mI (1970) GATTC_SPP_DEMO: Scan result, device 7a:39:d0:46:33:40, name len 0[0m
+[0;32mI (1980) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (1980) GATTC_SPP_DEMO: HT[0m
+[0;32mI (2010) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (2010) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2010) GATTC_SPP_DEMO: [0m
+[0;32mI (2010) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (2020) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2020) GATTC_SPP_DEMO: [0m
+[0;32mI (2020) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (2030) GATTC_SPP_DEMO: HT[0m
+[0;32mI (2050) GATTC_SPP_DEMO: Scan result, device c1:3b:02:4d:27:1a, name len 0[0m
+[0;32mI (2050) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (2050) GATTC_SPP_DEMO: HT[0m
+[0;32mI (2060) GATTC_SPP_DEMO: Scan result, device 59:fd:2c:d1:b3:53, name len 0[0m
+[0;32mI (2060) GATTC_SPP_DEMO: Scan result, device d2:e8:a1:bb:22:04, name len 0[0m
+[0;32mI (2070) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (2080) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2080) GATTC_SPP_DEMO: [0m
+[0;32mI (2080) GATTC_SPP_DEMO: Scan result, device 63:2f:39:35:19:0e, name len 0[0m
+[0;32mI (2100) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (2100) GATTC_SPP_DEMO: HT[0m
+[0;32mI (2110) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (2110) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2110) GATTC_SPP_DEMO: [0m
+[0;32mI (2110) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (2120) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2120) GATTC_SPP_DEMO: [0m
+[0;32mI (2160) GATTC_SPP_DEMO: Scan result, device f6:87:1a:10:aa:a0, name len 0[0m
+[0;32mI (2160) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (2160) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2170) GATTC_SPP_DEMO: [0m
+[0;32mI (2170) GATTC_SPP_DEMO: Scan result, device 3a:b1:9f:be:d6:ad, name len 0[0m
+[0;32mI (2190) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (2210) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (2210) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2210) GATTC_SPP_DEMO: [0m
+[0;32mI (2210) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (2220) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2220) GATTC_SPP_DEMO: [0m
+[0;32mI (2220) GATTC_SPP_DEMO: Scan result, device c1:3b:02:4d:27:1a, name len 0[0m
+[0;32mI (2230) GATTC_SPP_DEMO: Scan result, device d2:e8:a1:bb:22:04, name len 0[0m
+[0;32mI (2260) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (2260) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2260) GATTC_SPP_DEMO: [0m
+[0;32mI (2260) GATTC_SPP_DEMO: Scan result, device 63:2f:39:35:19:0e, name len 0[0m
+[0;32mI (2270) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (2270) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2280) GATTC_SPP_DEMO: [0m
+[0;32mI (2280) GATTC_SPP_DEMO: Scan result, device 3a:b1:9f:be:d6:ad, name len 0[0m
+[0;32mI (2280) GATTC_SPP_DEMO: Scan result, device f6:87:1a:10:aa:a0, name len 0[0m
+[0;32mI (2300) GATTC_SPP_DEMO: Scan result, device d2:e8:a1:bb:22:04, name len 0[0m
+[0;32mI (2310) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (2310) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2310) GATTC_SPP_DEMO: [0m
+[0;32mI (2310) GATTC_SPP_DEMO: Scan result, device f0:b0:62:a8:89:93, name len 0[0m
+[0;32mI (2320) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (2320) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2330) GATTC_SPP_DEMO: [0m
+[0;32mI (2350) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (2350) GATTC_SPP_DEMO: HT[0m
+[0;32mI (2350) GATTC_SPP_DEMO: Scan result, device 59:fd:2c:d1:b3:53, name len 0[0m
+[0;32mI (2360) GATTC_SPP_DEMO: Scan result, device f6:87:1a:10:aa:a0, name len 0[0m
+[0;32mI (2360) GATTC_SPP_DEMO: Scan result, device c1:3b:02:4d:27:1a, name len 0[0m
+[0;32mI (2360) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (2370) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2370) GATTC_SPP_DEMO: [0m
+[0;32mI (2380) GATTC_SPP_DEMO: Scan result, device 3a:b1:9f:be:d6:ad, name len 0[0m
+[0;32mI (2380) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (2390) GATTC_SPP_DEMO: HT[0m
+[0;32mI (2400) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (2410) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2410) GATTC_SPP_DEMO: [0m
+[0;32mI (2410) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (2410) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2420) GATTC_SPP_DEMO: [0m
+[0;32mI (2420) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (2430) GATTC_SPP_DEMO: HT[0m
+[0;32mI (2450) GATTC_SPP_DEMO: Scan result, device f6:87:1a:10:aa:a0, name len 0[0m
+[0;32mI (2460) GATTC_SPP_DEMO: Scan result, device 63:2f:39:35:19:0e, name len 0[0m
+[0;32mI (2460) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (2460) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2460) GATTC_SPP_DEMO: [0m
+[0;32mI (2460) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (2470) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2470) GATTC_SPP_DEMO: [0m
+[0;32mI (2480) GATTC_SPP_DEMO: Scan result, device f0:b0:62:a8:89:93, name len 0[0m
+[0;32mI (2480) GATTC_SPP_DEMO: Scan result, device f6:87:1a:10:aa:a0, name len 0[0m
+[0;32mI (2490) GATTC_SPP_DEMO: Scan result, device 6f:a0:41:f0:0c:c8, name len 0[0m
+[0;32mI (2500) GATTC_SPP_DEMO: Scan result, device 3a:b1:9f:be:d6:ad, name len 0[0m
+[0;32mI (2510) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (2510) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2510) GATTC_SPP_DEMO: [0m
+[0;32mI (2520) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (2520) GATTC_SPP_DEMO: HT[0m
+[0;32mI (2520) GATTC_SPP_DEMO: Scan result, device 75:8d:80:94:cd:e1, name len 0[0m
+[0;32mI (2560) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (2560) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2560) GATTC_SPP_DEMO: [0m
+[0;32mI (2560) GATTC_SPP_DEMO: Scan result, device 5e:b5:51:50:86:66, name len 0[0m
+[0;32mI (2560) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (2570) GATTC_SPP_DEMO: HT[0m
+[0;32mI (2610) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (2610) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2610) GATTC_SPP_DEMO: [0m
+[0;32mI (2620) GATTC_SPP_DEMO: Scan result, device f0:b0:62:a8:89:93, name len 0[0m
+[0;32mI (2650) GATTC_SPP_DEMO: Scan result, device c1:3b:02:4d:27:1a, name len 0[0m
+[0;32mI (2650) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (2650) GATTC_SPP_DEMO: HT[0m
+[0;32mI (2660) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (2660) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2660) GATTC_SPP_DEMO: [0m
+[0;32mI (2670) GATTC_SPP_DEMO: Scan result, device 6f:a0:41:f0:0c:c8, name len 0[0m
+[0;32mI (2670) GATTC_SPP_DEMO: Scan result, device 73:f4:00:c9:80:23, name len 0[0m
+[0;32mI (2680) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (2690) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2690) GATTC_SPP_DEMO: [0m
+[0;32mI (2690) GATTC_SPP_DEMO: Scan result, device f6:87:1a:10:aa:a0, name len 0[0m
+[0;32mI (2700) GATTC_SPP_DEMO: Scan result, device d2:e8:a1:bb:22:04, name len 0[0m
+[0;32mI (2700) GATTC_SPP_DEMO: Scan result, device de:a3:1d:f8:69:54, name len 0[0m
+[0;32mI (2710) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (2720) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2720) GATTC_SPP_DEMO: [0m
+[0;32mI (2720) GATTC_SPP_DEMO: Scan result, device 7a:39:d0:46:33:40, name len 0[0m
+[0;32mI (2730) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (2740) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2740) GATTC_SPP_DEMO: [0m
+[0;32mI (2740) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (2750) GATTC_SPP_DEMO: Scan result, device f6:87:1a:10:aa:a0, name len 0[0m
+[0;32mI (2760) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (2760) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2760) GATTC_SPP_DEMO: [0m
+[0;32mI (2770) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (2770) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2780) GATTC_SPP_DEMO: [0m
+[0;32mI (2790) GATTC_SPP_DEMO: Scan result, device ed:c4:30:a0:5e:14, name len 0[0m
+[0;32mI (2800) GATTC_SPP_DEMO: Scan result, device c1:3b:02:4d:27:1a, name len 0[0m
+[0;32mI (2810) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (2810) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2810) GATTC_SPP_DEMO: [0m
+[0;32mI (2810) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (2820) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2820) GATTC_SPP_DEMO: [0m
+[0;32mI (2830) GATTC_SPP_DEMO: Scan result, device 18:c3:3e:d6:89:63, name len 0[0m
+[0;32mI (2830) GATTC_SPP_DEMO: Scan result, device 63:2f:39:35:19:0e, name len 0[0m
+[0;32mI (2850) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (2850) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2850) GATTC_SPP_DEMO: [0m
+[0;32mI (2860) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (2860) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2870) GATTC_SPP_DEMO: [0m
+[0;32mI (2870) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (2870) GATTC_SPP_DEMO: HT[0m
+[0;32mI (2890) GATTC_SPP_DEMO: Scan result, device 59:fd:2c:d1:b3:53, name len 0[0m
+[0;32mI (2910) GATTC_SPP_DEMO: Scan result, device f0:b0:62:a8:89:93, name len 0[0m
+[0;32mI (2910) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (2910) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2910) GATTC_SPP_DEMO: [0m
+[0;32mI (2910) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (2920) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2920) GATTC_SPP_DEMO: [0m
+[0;32mI (2930) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (2930) GATTC_SPP_DEMO: HT[0m
+[0;32mI (2950) GATTC_SPP_DEMO: Scan result, device d2:e8:a1:bb:22:04, name len 0[0m
+[0;32mI (2950) GATTC_SPP_DEMO: Scan result, device f6:87:1a:10:aa:a0, name len 0[0m
+[0;32mI (2960) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (2960) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (2960) GATTC_SPP_DEMO: [0m
+[0;32mI (2970) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (2970) GATTC_SPP_DEMO: HT[0m
+[0;32mI (2990) GATTC_SPP_DEMO: Scan result, device 3a:b1:9f:be:d6:ad, name len 0[0m
+[0;32mI (3010) GATTC_SPP_DEMO: Scan result, device 63:2f:39:35:19:0e, name len 0[0m
+[0;32mI (3010) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (3010) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3010) GATTC_SPP_DEMO: [0m
+[0;32mI (3050) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (3060) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3060) GATTC_SPP_DEMO: [0m
+[0;32mI (3060) GATTC_SPP_DEMO: Scan result, device d2:e8:a1:bb:22:04, name len 0[0m
+[0;32mI (3060) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (3070) GATTC_SPP_DEMO: HT[0m
+[0;32mI (3070) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (3080) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3080) GATTC_SPP_DEMO: [0m
+[0;32mI (3080) GATTC_SPP_DEMO: Scan result, device f0:b0:62:a8:89:93, name len 0[0m
+[0;32mI (3090) GATTC_SPP_DEMO: Scan result, device 75:8d:80:94:cd:e1, name len 0[0m
+[0;32mI (3100) GATTC_SPP_DEMO: Scan result, device f6:87:1a:10:aa:a0, name len 0[0m
+[0;32mI (3110) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (3110) GATTC_SPP_DEMO: HT[0m
+[0;32mI (3110) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (3120) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3120) GATTC_SPP_DEMO: [0m
+[0;32mI (3140) GATTC_SPP_DEMO: Scan result, device f6:87:1a:10:aa:a0, name len 0[0m
+[0;32mI (3150) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (3150) GATTC_SPP_DEMO: HT[0m
+[0;32mI (3160) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (3160) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3160) GATTC_SPP_DEMO: [0m
+[0;32mI (3170) GATTC_SPP_DEMO: Scan result, device 59:fd:2c:d1:b3:53, name len 0[0m
+[0;32mI (3200) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (3200) GATTC_SPP_DEMO: HT[0m
+[0;32mI (3200) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (3200) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3210) GATTC_SPP_DEMO: [0m
+[0;32mI (3240) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (3240) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3240) GATTC_SPP_DEMO: [0m
+[0;32mI (3240) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (3250) GATTC_SPP_DEMO: HT[0m
+[0;32mI (3250) GATTC_SPP_DEMO: Scan result, device c1:3b:02:4d:27:1a, name len 0[0m
+[0;32mI (3260) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (3290) GATTC_SPP_DEMO: Scan result, device d2:e8:a1:bb:22:04, name len 0[0m
+[0;32mI (3300) GATTC_SPP_DEMO: Scan result, device f0:b0:62:a8:89:93, name len 0[0m
+[0;32mI (3300) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (3310) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3310) GATTC_SPP_DEMO: [0m
+[0;32mI (3310) GATTC_SPP_DEMO: Scan result, device 3a:b1:9f:be:d6:ad, name len 0[0m
+[0;32mI (3320) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (3330) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3330) GATTC_SPP_DEMO: [0m
+[0;32mI (3350) GATTC_SPP_DEMO: Scan result, device d2:e8:a1:bb:22:04, name len 0[0m
+[0;32mI (3360) GATTC_SPP_DEMO: Scan result, device f6:87:1a:10:aa:a0, name len 0[0m
+[0;32mI (3360) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (3360) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3360) GATTC_SPP_DEMO: [0m
+[0;32mI (3370) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (3370) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3380) GATTC_SPP_DEMO: [0m
+[0;32mI (3390) GATTC_SPP_DEMO: Scan result, device f6:87:1a:10:aa:a0, name len 0[0m
+[0;32mI (3390) GATTC_SPP_DEMO: Scan result, device 6f:a0:41:f0:0c:c8, name len 0[0m
+[0;32mI (3410) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (3410) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3410) GATTC_SPP_DEMO: [0m
+[0;32mI (3410) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (3420) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3420) GATTC_SPP_DEMO: [0m
+[0;32mI (3420) GATTC_SPP_DEMO: Scan result, device 3a:b1:9f:be:d6:ad, name len 0[0m
+[0;32mI (3440) GATTC_SPP_DEMO: Scan result, device 59:fd:2c:d1:b3:53, name len 0[0m
+[0;32mI (3450) GATTC_SPP_DEMO: Scan result, device 7a:39:d0:46:33:40, name len 0[0m
+[0;32mI (3460) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (3460) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3460) GATTC_SPP_DEMO: [0m
+[0;32mI (3460) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (3470) GATTC_SPP_DEMO: HT[0m
+[0;32mI (3470) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (3480) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3480) GATTC_SPP_DEMO: [0m
+[0;32mI (3500) GATTC_SPP_DEMO: Scan result, device f6:87:1a:10:aa:a0, name len 0[0m
+[0;32mI (3510) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (3510) GATTC_SPP_DEMO: HT[0m
+[0;32mI (3510) GATTC_SPP_DEMO: Scan result, device f6:87:1a:10:aa:a0, name len 0[0m
+[0;32mI (3520) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (3520) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3530) GATTC_SPP_DEMO: [0m
+[0;32mI (3540) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (3540) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3540) GATTC_SPP_DEMO: [0m
+[0;32mI (3540) GATTC_SPP_DEMO: Scan result, device f6:87:1a:10:aa:a0, name len 0[0m
+[0;32mI (3550) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (3560) GATTC_SPP_DEMO: HT[0m
+[0;32mI (3560) GATTC_SPP_DEMO: Scan result, device d2:e8:a1:bb:22:04, name len 0[0m
+[0;32mI (3570) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (3570) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3580) GATTC_SPP_DEMO: [0m
+[0;32mI (3590) GATTC_SPP_DEMO: Scan result, device 63:2f:39:35:19:0e, name len 0[0m
+[0;32mI (3590) GATTC_SPP_DEMO: Scan result, device dc:06:75:19:14:66, name len 2[0m
+[0;32mI (3590) GATTC_SPP_DEMO: HT[0m
+[0;32mI (3610) GATTC_SPP_DEMO: Scan result, device f0:b0:62:a8:89:93, name len 0[0m
+[0;32mI (3610) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (3610) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3610) GATTC_SPP_DEMO: [0m
+[0;32mI (3630) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (3640) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3640) GATTC_SPP_DEMO: [0m
+[0;32mI (3640) GATTC_SPP_DEMO: Scan result, device 7a:39:d0:46:33:40, name len 0[0m
+[0;32mI (3640) GATTC_SPP_DEMO: Scan result, device f0:b0:62:a8:89:93, name len 0[0m
+[0;32mI (3660) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (3660) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3660) GATTC_SPP_DEMO: [0m
+[0;32mI (3660) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (3670) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3670) GATTC_SPP_DEMO: [0m
+[0;32mI (3710) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (3710) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3710) GATTC_SPP_DEMO: [0m
+[0;32mI (3710) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (3720) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3720) GATTC_SPP_DEMO: [0m
+[0;32mI (3730) GATTC_SPP_DEMO: Scan result, device 3a:b1:9f:be:d6:ad, name len 0[0m
+[0;32mI (3740) GATTC_SPP_DEMO: Scan result, device f6:87:1a:10:aa:a0, name len 0[0m
+[0;32mI (3740) GATTC_SPP_DEMO: Scan result, device 63:2f:39:35:19:0e, name len 0[0m
+[0;32mI (3750) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (3760) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3760) GATTC_SPP_DEMO: [0m
+[0;32mI (3760) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (3760) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3770) GATTC_SPP_DEMO: [0m
+[0;32mI (3770) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (3810) GATTC_SPP_DEMO: Scan result, device f0:b0:62:a8:89:93, name len 0[0m
+[0;32mI (3810) GATTC_SPP_DEMO: Scan result, device 00:0a:40:f2:0f:c2, name len 18[0m
+[0;32mI (3810) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3810) GATTC_SPP_DEMO: [0m
+[0;32mI (3850) GATTC_SPP_DEMO: Scan result, device d2:e8:a1:bb:22:04, name len 0[0m
+[0;32mI (3850) GATTC_SPP_DEMO: Scan result, device d8:3b:da:49:b8:5e, name len 14[0m
+[0;32mI (3850) GATTC_SPP_DEMO: ESP_SPP_SERVER[0m
+[0;32mI (3860) GATTC_SPP_DEMO: Connect to the remote device.[0m
+[0;32mI (3870) GATTC_SPP_DEMO: Scanning stop successfully[0m
+[0;32mI (3870) GATTC_SPP_DEMO: Scan result, device 00:0a:40:d7:ec:21, name len 18[0m
+[0;32mI (3870) GATTC_SPP_DEMO: JBL PRX912[0m
+[0;32mI (3880) GATTC_SPP_DEMO: [0m
+[0;32mI (3950) GATTC_SPP_DEMO: Connected, conn_id 0, remote d8:3b:da:49:b8:5e[0m
+[0;32mI (3950) GATTC_SPP_DEMO: Open successfully, MTU 23[0m
+[0;32mI (4270) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (4770) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (5270) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (5310) GATTC_SPP_DEMO: Service search result, start_handle 40, end_handle 65535, UUID:0xabf0[0m
+[0;32mI (5310) GATTC_SPP_DEMO: Service search complete, conn_id 0, status 0[0m
+[0;32mI (5470) GATTC_SPP_DEMO: MTU exchange, status 0, MTU 512[0m
+[0;32mI (5470) GATTC_SPP_DEMO: PRIMARY_SERVICE, attribute_handle 40, start_handle 40, end_handle 65535, properties 0x0, uuid 0xabf0[0m
+[0;32mI (5480) GATTC_SPP_DEMO: CHARACTERISTIC, attribute_handle 42, start_handle 0, end_handle 0, properties 0x6, uuid 0xabf1[0m
+[0;32mI (5490) GATTC_SPP_DEMO: CHARACTERISTIC, attribute_handle 44, start_handle 0, end_handle 0, properties 0x22, uuid 0xabf2[0m
+[0;32mI (5500) GATTC_SPP_DEMO: DESCRIPTOR, attribute_handle 45, start_handle 0, end_handle 0, properties 0x0, uuid 0x2902[0m
+[0;32mI (5510) GATTC_SPP_DEMO: CHARACTERISTIC, attribute_handle 47, start_handle 0, end_handle 0, properties 0x6, uuid 0xabf3[0m
+[0;32mI (5520) GATTC_SPP_DEMO: CHARACTERISTIC, attribute_handle 49, start_handle 0, end_handle 0, properties 0x12, uuid 0xabf4[0m
+[0;32mI (5530) GATTC_SPP_DEMO: DESCRIPTOR, attribute_handle 50, start_handle 0, end_handle 0, properties 0x0, uuid 0x2902[0m
+[0;32mI (5540) GATTC_SPP_DEMO: CHARACTERISTIC, attribute_handle 52, start_handle 0, end_handle 0, properties 0x6, uuid 0xabf5[0m
+[0;32mI (5550) GATTC_SPP_DEMO: Index 2, UUID 0xabf2, handle 44[0m
+[0;32mI (5550) GATTC_SPP_DEMO: Notification register, index 2, status 0, handle 44[0m
+[0;32mI (5630) GATTC_SPP_DEMO: Descriptor write, status 0, handle 45[0m
+[0;32mI (5650) GATTC_SPP_DEMO: Index 5, UUID 0xabf4, handle 49[0m
+[0;32mI (5650) GATTC_SPP_DEMO: Notification register, index 5, status 0, handle 49[0m
+[0;32mI (5710) GATTC_SPP_DEMO: Descriptor write, status 0, handle 50[0m
+[0;32mI (5770) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (5770) Value: g1 -8628, g2 1676, g3 13048, a1 -448,  a2 30, a3 90[0m
+[0;32mI (6270) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (6270) Value: g1 -8712, g2 1692, g3 12868, a1 -411,  a2 0, a3 79[0m
+[0;32mI (6770) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (6770) Value: g1 -8744, g2 1644, g3 13200, a1 -438,  a2 20, a3 63[0m
+[0;32mI (7270) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (7270) Value: g1 -8724, g2 1656, g3 13016, a1 -425,  a2 18, a3 56[0m
+[0;32mI (7770) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (7770) Value: g1 -8784, g2 1704, g3 13032, a1 -672,  a2 46, a3 89[0m
+[0;32mI (8270) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (8270) Value: g1 -8720, g2 1632, g3 12936, a1 -469,  a2 -6, a3 47[0m
+[0;32mI (8770) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (8770) Value: g1 -8740, g2 1636, g3 12968, a1 -1098,  a2 104, a3 137[0m
+[0;32mI (9270) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (9270) Value: g1 -8740, g2 1412, g3 13908, a1 -983,  a2 -521, a3 -245[0m
+[0;32mI (9770) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (9770) Value: g1 -8696, g2 1188, g3 12588, a1 708,  a2 -663, a3 -104[0m
+[0;32mI (10270) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (10270) Value: g1 10552, g2 -3236, g3 12100, a1 -4747,  a2 119, a3 -528[0m
+[0;32mI (10770) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (10770) Value: g1 8656, g2 504, g3 28352, a1 -223,  a2 -3331, a3 7208[0m
+[0;32mI (11270) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (11270) Value: g1 1252, g2 6324, g3 32767, a1 -16902,  a2 -32768, a3 13240[0m
+[0;32mI (11770) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (11770) Value: g1 10272, g2 -1364, g3 9648, a1 -2240,  a2 -32768, a3 -1611[0m
+[0;32mI (12270) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (12270) Value: g1 12684, g2 -952, g3 10460, a1 -374,  a2 132, a3 546[0m
+[0;32mI (12770) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (12770) Value: g1 12456, g2 -916, g3 10712, a1 -440,  a2 -134, a3 27[0m
+[0;32mI (13270) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (13270) Value: g1 12840, g2 -672, g3 10148, a1 539,  a2 1567, a3 -112[0m
+[0;32mI (13770) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (13770) Value: g1 12248, g2 -404, g3 11404, a1 335,  a2 -1511, a3 657[0m
+[0;32mI (14270) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (14270) Value: g1 12324, g2 -540, g3 10944, a1 -8,  a2 10, a3 272[0m
+[0;32mI (14770) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (14770) Value: g1 16372, g2 4816, g3 292, a1 -6464,  a2 2717, a3 -5267[0m
+[0;32mI (15270) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (15270) Value: g1 -4240, g2 3028, g3 16520, a1 -701,  a2 10991, a3 -5038[0m
+[0;32mI (15770) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (15770) Value: g1 -6100, g2 1364, g3 14628, a1 -136,  a2 54, a3 269[0m
+[0;32mI (16270) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (16270) Value: g1 -7120, g2 1148, g3 13460, a1 45,  a2 1022, a3 362[0m
+[0;32mI (16770) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (16770) Value: g1 -8412, g2 624, g3 14732, a1 -932,  a2 921, a3 93[0m
+[0;32mI (17270) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (17270) Value: g1 -7816, g2 964, g3 13080, a1 -3192,  a2 843, a3 -806[0m
+[0;32mI (17770) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (17770) Value: g1 -8012, g2 620, g3 13540, a1 1179,  a2 -1794, a3 191[0m
+[0;32mI (18270) GATTC_SPP_DEMO: custom has sent some data in the queue![0m
+[0;32mI (18270) Value: g1 -7888, g2 756, g3 13760, a1 -496,  a2 35, a3 27[0m

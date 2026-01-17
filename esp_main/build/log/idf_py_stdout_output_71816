@@ -1,0 +1,71 @@
+Command: ninja flash
+[1/5] cd /home/MainUser/Documents/Projects/McHacks_2026/esp_main/build/esp-idf/esptool_py && /home/MainUser/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/MainUser/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/MainUser/Documents/Projects/McHacks_2026/esp_main/build/partition_table/partition-table.bin /home/MainUser/Documents/Projects/McHacks_2026/esp_main/build/McHacks.bin
+McHacks.bin binary size 0xcb150 bytes. Smallest app partition is 0x100000 bytes. 0x34eb0 bytes (21%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/MainUser/Documents/Projects/McHacks_2026/esp_main/build/bootloader/esp-idf/esptool_py && /home/MainUser/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/MainUser/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/MainUser/Documents/Projects/McHacks_2026/esp_main/build/bootloader/bootloader.bin
+Bootloader binary size 0x5240 bytes. 0x2dc0 bytes (36%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /home/MainUser/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/MainUser/esp/esp-idf -D "SERIAL_TOOL=/home/MainUser/.espressif/python_env/idf5.5_py3.13_env/bin/python;;/home/MainUser/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/MainUser/Documents/Projects/McHacks_2026/esp_main/build -P /home/MainUser/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/ttyACM1 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 McHacks.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.10.0
+Serial port /dev/ttyACM1
+Connecting....
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: d8:3b:da:49:b8:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000dbfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 21056 bytes to 13396...
+Writing at 0x00000000... (100 %)
+Wrote 21056 bytes (13396 compressed) at 0x00000000 in 0.6 seconds (effective 282.1 kbit/s)...
+Hash of data verified.
+Compressed 831824 bytes to 482760...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001d6b0... (6 %)
+Writing at 0x0002a9b3... (10 %)
+Writing at 0x00034b98... (13 %)
+Writing at 0x0003ce44... (16 %)
+Writing at 0x000428e0... (20 %)
+Writing at 0x00048b34... (23 %)
+Writing at 0x0004f0c5... (26 %)
+Writing at 0x0005535c... (30 %)
+Writing at 0x0005b09a... (33 %)
+Writing at 0x00060cc8... (36 %)
+Writing at 0x00066b9e... (40 %)
+Writing at 0x0006d48c... (43 %)
+Writing at 0x000733c3... (46 %)
+Writing at 0x00079a29... (50 %)
+Writing at 0x0007fa08... (53 %)
+Writing at 0x00085736... (56 %)
+Writing at 0x0008b767... (60 %)
+Writing at 0x00090f31... (63 %)
+Writing at 0x0009697f... (66 %)
+Writing at 0x0009c973... (70 %)
+Writing at 0x000a28d6... (73 %)
+Writing at 0x000a8782... (76 %)
+Writing at 0x000ade55... (80 %)
+Writing at 0x000b4a23... (83 %)
+Writing at 0x000bd917... (86 %)
+Writing at 0x000c4ea1... (90 %)
+Writing at 0x000cb4cf... (93 %)
+Writing at 0x000d14db... (96 %)
+Writing at 0x000d7e66... (100 %)
+Wrote 831824 bytes (482760 compressed) at 0x00010000 in 11.0 seconds (effective 607.4 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 562.4 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

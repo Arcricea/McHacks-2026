@@ -1,0 +1,152 @@
+Command: /home/MainUser/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/MainUser/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /home/MainUser/Documents/Projects/McHacks_2026/esp_main/build/McHacks.elf /home/MainUser/Documents/Projects/McHacks_2026/esp_main/build/bootloader/bootloader.elf -m '/home/MainUser/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/MainUser/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyACM0'
+[0;32mI (224) esp_image: segment 4: paddr=000c9c84 vaddr=4037b254 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037ea42
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jan 17 2026 12:51:24[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (32) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=24e58h (151128) map[0m
+[0;32mI (113) esp_image: segment 1: paddr=00034e80 vaddr=3fc9c500 size=03f3ch ( 16188) load[0m
+[0;32mI (117) esp_image: segment 2: paddr=00038dc4 vaddr=40374000 size=07254h ( 29268) load[0m
+[0;32mI (124) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=89c5ch (564316) map[0m
+[0;32mI (224) esp_image: segment 4: paddr=000c9c84 vaddr=4037b254 size=111bch ( 70076) load[0m
+[0;32mI (240) esp_image: segment 5: paddr=000dae48 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (249) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (250) boot: Disabling RNG early entropy source...[0m
+[0;32mI (260) cpu_start: Multicore app[0m
+[0;32mI (269) cpu_start: Pro cpu start user code[0m
+[0;32mI (269) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (269) app_init: Application information:[0m
+[0;32mI (269) app_init: Project name:     McHacks[0m
+[0;32mI (273) app_init: App version:      2a12c4b-dirty[0m
+[0;32mI (277) app_init: Compile time:     Jan 17 2026 13:35:35[0m
+[0;32mI (282) app_init: ELF file SHA256:  70bf1a133...[0m
+[0;32mI (287) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (291) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (295) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (299) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (303) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (309) heap_init: At 3FCA54A0 len 00044270 (272 KiB): RAM[0m
+[0;32mI (314) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (319) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (324) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (331) spi_flash: detected chip: gd[0m
+[0;32mI (333) spi_flash: flash io: dio[0m
+[0;33mW (336) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (349) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (355) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (361) coexist: coex firmware version: b0bcc39[0m
+[0;32mI (365) coexist: coexist rom version e7ae62f[0m
+[0;32mI (370) main_task: Started on CPU0[0m
+[0;32mI (380) main_task: Calling app_main()[0m
+[0;32mI (600) GATTS_SPP_DEMO: db = 13[0m
+[0;32mI (600) uart: queue free spaces: 10[0m
+[0;32mI (610) BLE_INIT: BT controller compile version [2edb0b0][0m
+[0;32mI (610) BLE_INIT: Using main XTAL as clock source[0m
+[0;32mI (610) BLE_INIT: Feature Config, ADV:1, BLE_50:1, DTM:1, SCAN:1, CCA:0, SMP:1, CONNECT:1[0m
+[0;32mI (620) BLE_INIT: Bluetooth MAC: d8:3b:da:49:b8:5e[0m
+[0;32mI (620) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (660) GATTS_SPP_DEMO: server_app_main init bluetooth[0m
+[0;32mI (680) GATTS_SPP_DEMO: GATT server register, status 0, app_id 86, gatts_if 3[0m
+[0;32mI (690) GATTS_SPP_DEMO: The number handle d[0m
+[0;32mI (690) GATTS_SPP_DEMO: Service start, status 0, service_handle 40[0m
+[0;32mI (690) GATTS_SPP_DEMO: Advertising start successfully[0m
+[0;32mI (700) main_task: Returned from app_main()[0m
+[0;32mI (6120) GATTS_SPP_DEMO: Connected, conn_id 0, remote 80:b5:4e:c3:81:7e[0m
+[0;32mI (7520) GATTS_SPP_DEMO: MTU exchange, MTU 512[0m
+[0;32mI (7680) GATTS_SPP_DEMO: SPP data notification enable[0m
+[0;32mI (7760) Value: g1 -12572, g2 -1340, g3 9260, a1 -417,  a2 -27, a3 81[0m
+[0;32mI (7760) GATTS_SPP_DEMO: SPP status notification enable[0m
+[0;32mI (8200) Value: g1 -12492, g2 -1320, g3 9376, a1 -430,  a2 -22, a3 72[0m
+[0;32mI (8720) Value: g1 -12452, g2 -1260, g3 9344, a1 -447,  a2 9, a3 68[0m
+[0;32mI (9200) Value: g1 -12512, g2 -1240, g3 9480, a1 -448,  a2 0, a3 80[0m
+[0;32mI (9720) Value: g1 -12432, g2 -1288, g3 9356, a1 -424,  a2 -35, a3 101[0m
+[0;32mI (10200) Value: g1 -12492, g2 -1344, g3 9324, a1 -428,  a2 6, a3 100[0m
+[0;32mI (10720) Value: g1 -9184, g2 60, g3 16784, a1 -529,  a2 -8745, a3 3904[0m
+[0;32mI (11200) Value: g1 6012, g2 -7736, g3 12132, a1 -572,  a2 -4164, a3 -2221[0m
+[0;32mI (11720) Value: g1 7036, g2 -4888, g3 14316, a1 -247,  a2 -751, a3 426[0m
+[0;32mI (12200) Value: g1 6660, g2 -5304, g3 14060, a1 -140,  a2 607, a3 455[0m
+[0;32mI (12720) Value: g1 6100, g2 -5160, g3 14340, a1 -381,  a2 682, a3 292[0m
+[0;32mI (13200) Value: g1 6528, g2 -4520, g3 13164, a1 -2604,  a2 -5239, a3 -3256[0m
+[0;32mI (13720) Value: g1 13612, g2 3444, g3 9748, a1 -96,  a2 2585, a3 -1438[0m
+[0;32mI (14200) Value: g1 11728, g2 2376, g3 11980, a1 32,  a2 477, a3 543[0m
+[0;32mI (14720) Value: g1 11260, g2 1184, g3 12152, a1 -204,  a2 -652, a3 -485[0m
+[0;32mI (15200) Value: g1 11488, g2 1368, g3 12460, a1 -895,  a2 -942, a3 -946[0m
+[0;32mI (15720) Value: g1 11700, g2 -2300, g3 14248, a1 -26904,  a2 2081, a3 -508[0m
+[0;32mI (16200) Value: g1 3008, g2 -13380, g3 2640, a1 -1538,  a2 -1675, a3 7466[0m
+[0;32mI (16720) Value: g1 932, g2 -15660, g3 8160, a1 1487,  a2 -2276, a3 -741[0m
+[0;32mI (17200) Value: g1 1804, g2 -14456, g3 7900, a1 -273,  a2 752, a3 542[0m
+[0;32mI (17720) Value: g1 1768, g2 -14680, g3 7448, a1 -657,  a2 -145, a3 -148[0m
+[0;32mI (18200) Value: g1 5960, g2 -16476, g3 6656, a1 7489,  a2 -8199, a3 -14738[0m
+[0;32mI (18720) Value: g1 16180, g2 5604, g3 8324, a1 1173,  a2 -5863, a3 -4976[0m
+[0;32mI (19200) Value: g1 15192, g2 4508, g3 6280, a1 -670,  a2 542, a3 331[0m
+[0;32mI (19720) Value: g1 14904, g2 3656, g3 7108, a1 -378,  a2 216, a3 45[0m
+[0;32mI (20200) Value: g1 14808, g2 3732, g3 7040, a1 -578,  a2 292, a3 100[0m
+[0;32mI (20720) Value: g1 14568, g2 3588, g3 7844, a1 -580,  a2 620, a3 521[0m
+[0;32mI (21200) Value: g1 13744, g2 2912, g3 9920, a1 -1357,  a2 1133, a3 699[0m
+[0;32mI (21720) Value: g1 12924, g2 176, g3 11344, a1 527,  a2 -6156, a3 4236[0m
+[0;32mI (22200) Value: g1 14708, g2 -8780, g3 -2764, a1 -6366,  a2 -1444, a3 -1942[0m
+[0;32mI (22720) Value: g1 15316, g2 -8116, g3 -2996, a1 295,  a2 -458, a3 653[0m
+[0;32mI (23200) Value: g1 15228, g2 -7824, g3 -2668, a1 198,  a2 794, a3 490[0m
+[0;32mI (23720) Value: g1 17056, g2 -9968, g3 -2356, a1 -132,  a2 2208, a3 1343[0m
+[0;32mI (24200) Value: g1 13796, g2 -9300, g3 4304, a1 -392,  a2 2736, a3 983[0m
+[0;32mI (24720) Value: g1 14576, g2 -8768, g3 -1732, a1 -444,  a2 -5638, a3 314[0m
+[0;32mI (25200) Value: g1 11100, g2 -9444, g3 -11480, a1 -1817,  a2 -5511, a3 -743[0m
+[0;32mI (25720) Value: g1 10288, g2 -6740, g3 -13252, a1 -86,  a2 -2142, a3 91[0m
+[0;32mI (26200) Value: g1 8816, g2 -5536, g3 -13292, a1 -890,  a2 -2230, a3 -1140[0m
+[0;32mI (26720) Value: g1 9592, g2 -5348, g3 -12852, a1 2158,  a2 6232, a3 756[0m
+[0;32mI (27200) Value: g1 11828, g2 -11844, g3 -7328, a1 8441,  a2 585, a3 -2003[0m
+[0;32mI (27720) Value: g1 13760, g2 -9404, g3 -4844, a1 -597,  a2 2976, a3 372[0m
+[0;32mI (28200) Value: g1 14176, g2 -10420, g3 -1936, a1 -370,  a2 3413, a3 -1268[0m
+[0;32mI (28720) Value: g1 5672, g2 -4232, g3 -1084, a1 -1137,  a2 14460, a3 -3242[0m
+[0;32mI (29200) Value: g1 15332, g2 -4180, g3 1748, a1 3224,  a2 -3873, a3 -12329[0m
+[0;32mI (29720) Value: g1 17264, g2 -1112, g3 836, a1 1952,  a2 -250, a3 651[0m
+[0;32mI (30200) Value: g1 17300, g2 -416, g3 464, a1 -108,  a2 130, a3 406[0m
+[0;32mI (30720) Value: g1 17308, g2 -644, g3 900, a1 -437,  a2 -92, a3 -323[0m
+[0;32mI (31200) Value: g1 17164, g2 96, g3 1212, a1 -2344,  a2 2146, a3 -303[0m
+[0;32mI (31720) Value: g1 16160, g2 -500, g3 4404, a1 -3664,  a2 6577, a3 1436[0m
+[0;32mI (32200) Value: g1 15632, g2 -1244, g3 6700, a1 -354,  a2 544, a3 -104[0m
+[0;32mI (32720) Value: g1 15064, g2 -1804, g3 7904, a1 -816,  a2 1243, a3 362[0m
+[0;32mI (33200) Value: g1 14472, g2 -2940, g3 9900, a1 1102,  a2 632, a3 49[0m
+[0;32mI (33720) Value: g1 10884, g2 -1616, g3 10236, a1 -1436,  a2 -1236, a3 3271[0m
+[0;32mI (34200) Value: g1 12424, g2 -4376, g3 10152, a1 -4637,  a2 4183, a3 -815[0m
+[0;32mI (34720) Value: g1 10796, g2 -4944, g3 11624, a1 -453,  a2 145, a3 1621[0m
+[0;32mI (35200) Value: g1 10056, g2 -5232, g3 12332, a1 1459,  a2 -2319, a3 4171[0m
+[0;32mI (35720) Value: g1 8172, g2 -6436, g3 12460, a1 -2406,  a2 17724, a3 -2736[0m
+[0;32mI (36200) Value: g1 4224, g2 -5496, g3 13656, a1 591,  a2 2181, a3 3179[0m
+[0;32mI (36720) Value: g1 -2700, g2 -6136, g3 16096, a1 -2038,  a2 4810, a3 -727[0m
+[0;32mI (37200) Value: g1 -3528, g2 -5568, g3 14756, a1 2883,  a2 5101, a3 -2118[0m
+[0;32mI (37720) Value: g1 -4456, g2 -3940, g3 14572, a1 229,  a2 1326, a3 -593[0m
+[0;32mI (38200) Value: g1 -5588, g2 -1736, g3 12256, a1 -36,  a2 -2715, a3 3183[0m
+[0;32mI (38720) Value: g1 -6360, g2 -2696, g3 13456, a1 -877,  a2 -580, a3 808[0m
+[0;32mI (39200) Value: g1 -6752, g2 -1180, g3 16800, a1 916,  a2 -7969, a3 5551[0m
+[0;32mI (39720) Value: g1 -7184, g2 -2480, g3 17940, a1 -2212,  a2 -1762, a3 -63[0m
+[0;32mI (40200) Value: g1 -224, g2 -3236, g3 16752, a1 -3037,  a2 -5399, a3 1132[0m
+[0;32mI (40720) Value: g1 9608, g2 -6368, g3 12084, a1 338,  a2 -8235, a3 1186[0m
+[0;32mI (41200) Value: g1 7824, g2 -5024, g3 12620, a1 1603,  a2 5606, a3 2344[0m
+[0;32mI (41720) Value: g1 4372, g2 -4996, g3 14564, a1 -1307,  a2 -218, a3 -1679[0m
+[0;32mI (42200) Value: g1 1304, g2 -5024, g3 16000, a1 1046,  a2 8556, a3 485[0m
+[0;32mI (42720) Value: g1 -4872, g2 -3784, g3 17272, a1 1209,  a2 3121, a3 2395[0m
+[0;32mI (43200) Value: g1 -6176, g2 -3428, g3 14060, a1 1270,  a2 5216, a3 -1182[0m
+[0;32mI (43720) Value: g1 -9472, g2 -2400, g3 14396, a1 3105,  a2 -2190, a3 2850[0m
+[0;32mI (44200) Value: g1 -5612, g2 -308, g3 15052, a1 -433,  a2 37, a3 67[0m
+[0;32mI (44720) Value: g1 -5316, g2 -320, g3 15132, a1 -419,  a2 90, a3 60[0m

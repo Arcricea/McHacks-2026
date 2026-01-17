@@ -1,4 +1,7 @@
+#include "esp_server.h"
 #include "lgfx/v1/misc/enum.hpp"
+#include <cstdint>
+#include <sys/types.h>
 #define LGFX_USE_V1
 
 #include "esp_log.h"
@@ -177,9 +180,15 @@ void graphics_main() {
       b = q;
       break;
     }
+
+    uint16_t x = 120 + (g_imu_data.gyro_z * 120 / 20000);
+    uint16_t y = 160 + (g_imu_data.gyro_y * 160 / 20000);
+
     drawBuffer->fillScreen(drawBuffer->color565(r, g, b));
     hue += 1;
-    lcd.display();
+    drawBuffer->drawCircle(x, y, 10, drawBuffer->color565(100, 255, 100));
+
+    drawBuffer->pushSprite(&lcd, 0, 0);
 
     currentBuffer = 1 - currentBuffer;
 
