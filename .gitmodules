@@ -1,0 +1,3 @@
+[submodule "esp_main/esp_main/components"]
+	path = esp_main/esp_main/components
+	url = git@github.com:Arcricea/ESP_Local_Libraries.git
