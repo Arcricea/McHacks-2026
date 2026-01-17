@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/MainUser/Documents/Projects/McHacks_2026/esp_imu/build/CMakeFiles/bootloader"
+		},
+		{
+			"file" : "/home/MainUser/Documents/Projects/McHacks_2026/esp_imu/build/CMakeFiles/bootloader.rule"
+		},
+		{
+			"file" : "/home/MainUser/Documents/Projects/McHacks_2026/esp_imu/build/CMakeFiles/bootloader-complete.rule"
+		},
+		{
+			"file" : "/home/MainUser/Documents/Projects/McHacks_2026/esp_imu/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+		},
+		{
+			"file" : "/home/MainUser/Documents/Projects/McHacks_2026/esp_imu/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+		},
+		{
+			"file" : "/home/MainUser/Documents/Projects/McHacks_2026/esp_imu/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+		},
+		{
+			"file" : "/home/MainUser/Documents/Projects/McHacks_2026/esp_imu/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+		},
+		{
+			"file" : "/home/MainUser/Documents/Projects/McHacks_2026/esp_imu/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+		},
+		{
+			"file" : "/home/MainUser/Documents/Projects/McHacks_2026/esp_imu/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+		},
+		{
+			"file" : "/home/MainUser/Documents/Projects/McHacks_2026/esp_imu/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bootloader"
+		],
+		"name" : "bootloader"
+	}
+}

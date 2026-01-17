@@ -1,0 +1,2 @@
+source /home/MainUser/Documents/Projects/McHacks_2026/esp_imu/build/gdbinit/symbols
+source /home/MainUser/Documents/Projects/McHacks_2026/esp_imu/build/gdbinit/connect
