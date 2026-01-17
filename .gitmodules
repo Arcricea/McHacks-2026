@@ -2,5 +2,5 @@
 	path = esp_main/components
 	url = git@github.com:Arcricea/ESP_Local_Libraries.git
 [submodule "esp_imu/components"]
-	path = esp_main/components
+	path = esp_imu/components
 	url = git@github.com:Arcricea/ESP_Local_Libraries.git
