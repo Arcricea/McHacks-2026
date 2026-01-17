@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "McHacks",
-    "project_version":    "4322308-dirty",
+    "project_version":    "802f118-dirty",
     "project_path":       "/home/MainUser/Documents/Projects/McHacks_2026/esp_imu",
     "idf_path":           "/home/MainUser/esp/esp-idf",
     "build_dir":          "/home/MainUser/Documents/Projects/McHacks_2026/esp_imu/build",
