@@ -67,20 +67,27 @@
 #define AUDIO_BUFFER 2048           // buffer size for reading the wav file and sending to i2s
 #define WAV_FILE "/sdcard/test.wav" // wav file to play
 
+// I2S PDM sample rate limits for ESP32-S3
+#define I2S_PDM_MIN_RATE 8000       // Minimum supported sample rate
+#define I2S_PDM_MAX_RATE 48000      // Maximum reliable sample rate for PDM TX on ESP32-S3
+
 // constants
 static const char *TAG = "speaker_pdm";
 
 // handles
 static i2s_chan_handle_t tx_handle = NULL;
 
+// Playback speed control (1.0 = normal, 2.0 = 2x speed, 0.5 = half speed)
+static float playback_speed = 1.0f;
+
 static esp_err_t i2s_setup(uint32_t sample_rate, i2s_slot_mode_t slot_mode)
 {
     ESP_LOGI(TAG, "Initializing I2S PDM TX channel with Rate: %ld, Mode: %s", 
              sample_rate, slot_mode == I2S_SLOT_MODE_STEREO ? "Stereo" : "Mono");
 
+    // Channel should always be NULL here (cleaned up after each playback)
     if (tx_handle != NULL) {
-        ESP_LOGI(TAG, "I2S channel already exists, deleting...");
-        i2s_del_channel(tx_handle);
+        ESP_LOGW(TAG, "I2S channel handle is not NULL, this shouldn't happen!");
         tx_handle = NULL;
     }
 
@@ -143,9 +150,34 @@ static esp_err_t play_wav(const char *fp)
         return ESP_ERR_NOT_SUPPORTED;
     }
 
+    // Apply playback speed adjustment with frame skipping for speeds above hardware limit
+    uint32_t adjusted_sample_rate = (uint32_t)(sample_rate * playback_speed);
+    float frame_skip_ratio = 1.0f;  // 1.0 = play all frames, 2.0 = skip every other frame
+
+    // Check if we exceed hardware limits
+    if (adjusted_sample_rate > I2S_PDM_MAX_RATE) {
+        // Use frame skipping for speeds above hardware limit
+        frame_skip_ratio = (float)adjusted_sample_rate / I2S_PDM_MAX_RATE;
+        adjusted_sample_rate = I2S_PDM_MAX_RATE;
+
+        ESP_LOGI(TAG, "Speed %.2fx exceeds hardware limit (max %.2fx for %ld Hz)",
+                 playback_speed, (float)I2S_PDM_MAX_RATE / sample_rate, sample_rate);
+        ESP_LOGI(TAG, "Using frame skipping: playing at %d Hz, skipping %.1f%% of samples",
+                 I2S_PDM_MAX_RATE, (frame_skip_ratio - 1.0f) * 100.0f / frame_skip_ratio);
+        ESP_LOGI(TAG, "Effective speed: %.2fx (hardware %.2fx + frame skip %.2fx)",
+                 playback_speed, (float)I2S_PDM_MAX_RATE / sample_rate, frame_skip_ratio);
+    } else if (adjusted_sample_rate < I2S_PDM_MIN_RATE) {
+        ESP_LOGW(TAG, "Adjusted sample rate %ld Hz is below PDM minimum, clamping to %d Hz",
+                 adjusted_sample_rate, I2S_PDM_MIN_RATE);
+        adjusted_sample_rate = I2S_PDM_MIN_RATE;
+    }
+    
+    ESP_LOGI(TAG, "Playback speed: %.2fx (Original: %ld Hz -> Adjusted: %ld Hz)",
+             playback_speed, sample_rate, adjusted_sample_rate);
+
     // Configure I2S based on file properties
     i2s_slot_mode_t mode = (channels == 2) ? I2S_SLOT_MODE_STEREO : I2S_SLOT_MODE_MONO;
-    ESP_ERROR_CHECK(i2s_setup(sample_rate, mode));
+    ESP_ERROR_CHECK(i2s_setup(adjusted_sample_rate, mode));
 
     // create a writer buffer
     int16_t *buf = (int16_t *)calloc(AUDIO_BUFFER, sizeof(int16_t));
@@ -158,6 +190,11 @@ static esp_err_t play_wav(const char *fp)
     size_t bytes_read = 0;
     size_t bytes_written = 0;
 
+    // Frame skipping state
+    float frame_position = 0.0f;
+    size_t samples_skipped = 0;
+    size_t samples_played = 0;
+
     // Read first chunk
     bytes_read = fread(buf, sizeof(int16_t), AUDIO_BUFFER, fh);
 
@@ -165,6 +202,30 @@ static esp_err_t play_wav(const char *fp)
 
     int chunk_count = 0;
     while (bytes_read > 0) {
+        // Apply frame skipping if needed
+        if (frame_skip_ratio > 1.0f) {
+            // Use fractional frame position for accurate skipping
+            size_t samples_to_process = bytes_read;
+            size_t samples_to_write = 0;
+
+            // Reset frame position for each chunk
+            frame_position = 0.0f;
+
+            // Fractional decimation: works for any ratio (2.0x, 2.5x, etc.)
+            while (frame_position < samples_to_process) {
+                size_t input_index = (size_t)frame_position;
+                if (input_index < samples_to_process) {
+                    buf[samples_to_write] = buf[input_index];
+                    samples_to_write++;
+                }
+                frame_position += frame_skip_ratio;
+            }
+
+            samples_skipped += (samples_to_process - samples_to_write);
+            samples_played += samples_to_write;
+            bytes_read = samples_to_write;
+        }
+
         // write the buffer to the i2s
         if (i2s_channel_write(tx_handle, buf, bytes_read * sizeof(int16_t), &bytes_written, portMAX_DELAY) != ESP_OK) {
             ESP_LOGE(TAG, "I2S write failed");
@@ -181,6 +242,22 @@ static esp_err_t play_wav(const char *fp)
     printf("\n");
 
     ESP_ERROR_CHECK(i2s_channel_disable(tx_handle));
+
+    // Log frame skipping statistics if used
+    if (frame_skip_ratio > 1.0f && samples_skipped > 0) {
+        ESP_LOGI(TAG, "Frame skipping stats: Played %zu samples, Skipped %zu samples (%.1f%%)",
+                 samples_played, samples_skipped,
+                 (float)samples_skipped * 100.0f / (samples_played + samples_skipped));
+    }
+
+    // Delete the channel after playback to free resources
+    ESP_LOGI(TAG, "Cleaning up I2S channel");
+    esp_err_t ret = i2s_del_channel(tx_handle);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to delete I2S channel: %s", esp_err_to_name(ret));
+    }
+    tx_handle = NULL;  // Important: Set to NULL after deletion
+
     free(buf);
     fclose(fh);
 
@@ -207,6 +284,34 @@ static void list_sd_files(const char *path)
     closedir(dir);
 }
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+// Set playback speed (1.0 = normal, 2.0 = 2x speed, 0.5 = half speed)
+void set_playback_speed(float speed)
+{
+    if (speed <= 0.0f) {
+        ESP_LOGW(TAG, "Invalid playback speed %.2f, must be > 0. Using 1.0", speed);
+        playback_speed = 1.0f;
+    } else if (speed > 4.0f) {
+        ESP_LOGW(TAG, "Playback speed %.2f is very high, clamping to 4.0x", speed);
+        playback_speed = 4.0f;
+    } else if (speed < 0.25f) {
+        ESP_LOGW(TAG, "Playback speed %.2f is very low, clamping to 0.25x", speed);
+        playback_speed = 0.25f;
+    } else {
+        playback_speed = speed;
+    }
+    ESP_LOGI(TAG, "Playback speed set to %.2fx", playback_speed);
+}
+
+// Get current playback speed
+float get_playback_speed(void)
+{
+    return playback_speed;
+}
+
 // Renamed from app_main to avoid conflict with McHacks.cpp
 void speaker_main(void)
 {
@@ -222,14 +327,13 @@ void speaker_main(void)
         ESP_LOGE(TAG, "Failed to play WAV file");
     }
 
-    // Clean up
-    if (tx_handle) {
-        i2s_del_channel(tx_handle);
-    }
-
-    // We don't deinit SD card here just in case other tasks need it,
-    // or we can call sd_card_deinit() if we are sure.
-    // sd_card_deinit();
+    // Channel is already cleaned up in play_wav()
+    // We don't deinit SD card here just in case other tasks need it
 
     ESP_LOGI(TAG, "Speaker test complete");
 }
+
+#ifdef __cplusplus
+}
+#endif
+
