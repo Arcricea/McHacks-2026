@@ -1,0 +1,267 @@
+Command: /home/MainUser/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/MainUser/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /home/MainUser/Documents/Projects/McHacks_2026/esp_imu/build/McHacks.elf /home/MainUser/Documents/Projects/McHacks_2026/esp_imu/build/bootloader/bootloader.elf -m '/home/MainUser/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/MainUser/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyACM0'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037e202
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jan 17 2026 13:27:46[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (32) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=231b4h (143796) map[0m
+[0;32mI (112) esp_image: segment 1: paddr=000331dc vaddr=3fc9ad00 size=03de0h ( 15840) load[0m
+[0;32mI (116) esp_image: segment 2: paddr=00036fc4 vaddr=40374000 size=09054h ( 36948) load[0m
+[0;32mI (124) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=813ech (529388) map[0m
+[0;32mI (218) esp_image: segment 4: paddr=000c1414 vaddr=4037d054 size=0dc34h ( 56372) load[0m
+[0;32mI (231) esp_image: segment 5: paddr=000cf050 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (240) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (240) boot: Disabling RNG early entropy source...[0m
+[0;32mI (250) cpu_start: Multicore app[0m
+[0;32mI (259) cpu_start: Pro cpu start user code[0m
+[0;32mI (259) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (259) app_init: Application information:[0m
+[0;32mI (259) app_init: Project name:     McHacks[0m
+[0;32mI (263) app_init: App version:      7f13f7a-dirty[0m
+[0;32mI (268) app_init: Compile time:     Jan 17 2026 18:38:39[0m
+[0;32mI (273) app_init: ELF file SHA256:  e767806b1...[0m
+[0;32mI (277) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (281) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (285) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (289) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (293) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (299) heap_init: At 3FCA28B8 len 00046E58 (283 KiB): RAM[0m
+[0;32mI (304) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (309) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (315) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (321) spi_flash: detected chip: gd[0m
+[0;32mI (323) spi_flash: flash io: dio[0m
+[0;33mW (326) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (338) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (348) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (355) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (361) coexist: coex firmware version: b0bcc39[0m
+[0;32mI (365) coexist: coexist rom version e7ae62f[0m
+[0;32mI (370) main_task: Started on CPU0[0m
+[0;32mI (380) main_task: Calling app_main()[0m
+[0;32mI (380) uart: queue free spaces: 10[0m
+[0;32mI (390) BLE_INIT: BT controller compile version [2edb0b0][0m
+[0;32mI (390) BLE_INIT: Using main XTAL as clock source[0m
+[0;32mI (390) BLE_INIT: Feature Config, ADV:1, BLE_50:1, DTM:1, SCAN:1, CCA:0, SMP:1, CONNECT:1[0m
+[0;32mI (400) BLE_INIT: Bluetooth MAC: 80:b5:4e:c3:7b:4e[0m
+[0;32mI (400) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (440) GATTC_SPP_DEMO: client_app_main init bluetooth[0m
+[0;32mI (460) GATTC_SPP_DEMO: register callback[0m
+[0;32mI (460) GATTC_SPP_DEMO: GATT client register, status 0, app_id 0, gattc_if 3[0m
+[0;32mI (460) GATTC_SPP_DEMO: Scanning start successfully[0m
+[0;32mI (480) GATTC_SPP_DEMO: Scan result, device 76:e7:8c:3e:04:7f, name len 0[0m
+[0;32mI (490) GATTC_SPP_DEMO: Scan result, device 4b:13:1a:51:3b:e9, name len 0[0m
+[0;32mI (520) GATTC_SPP_DEMO: Scan result, device 0b:23:1f:b4:b6:16, name len 0[0m
+[0;32mI (520) GATTC_SPP_DEMO: Scan result, device 32:9f:5a:95:92:4e, name len 0[0m
+[0;32mI (530) GATTC_SPP_DEMO: Scan result, device 32:3e:1d:ac:5c:68, name len 0[0m
+[0;32mI (590) GATTC_SPP_DEMO: Scan result, device c1:3b:02:4d:27:1a, name len 0[0m
+[0;32mI (630) GATTC_SPP_DEMO: Scan result, device f0:b0:62:a8:89:93, name len 0[0m
+[0;32mI (630) GATTC_SPP_DEMO: Scan result, device 47:92:14:23:39:56, name len 0[0m
+[0;32mI (640) GATTC_SPP_DEMO: Scan result, device d8:3b:da:49:b8:5e, name len 14[0m
+[0;32mI (640) GATTC_SPP_DEMO: ESP_SPP_SERVER[0m
+[0;32mI (640) GATTC_SPP_DEMO: Connect to the remote device.[0m
+[0;32mI (650) GATTC_SPP_DEMO: Scanning stop successfully[0m
+ESP_ERROR_CHECK failed: esp_err_t 0xffffffff (ESP_FAIL) at 0x42057e3c
+file: "./components/MP6050/mp6050.cpp" line 62
+func: IMU_DATA imu_read()
+expression: i2c_master_cmd_begin(I2C_NUM_0, cmd, 1000 / portTICK_PERIOD_MS)
+
+abort() was called at PC 0x40381077 on core 0
+
+
+Backtrace: 0x403810b9:0x3fca6320 0x40381081:0x3fca6340 0x40387e01:0x3fca6360 0x40381077:0x3fca63d0 0x42057e3c:0x3fca6400 0x4200d5d2:0x3fca6440 0x4200d616:0x3fca6470 0x42080a74:0x3fca6490 0x40381d79:0x3fca64c0
+
+
+
+
+ELF file SHA256: e767806b1
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40381208
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jan 17 2026 13:27:46[0m
+[0;32mI (24) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=231b4h (143796) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=000331dc vaddr=3fc9ad00 size=03de0h ( 15840) load[0m
+[0;32mI (115) esp_image: segment 2: paddr=00036fc4 vaddr=40374000 size=09054h ( 36948) load[0m
+[0;32mI (124) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=813ech (529388) map[0m
+[0;32mI (217) esp_image: segment 4: paddr=000c1414 vaddr=4037d054 size=0dc34h ( 56372) load[0m
+[0;32mI (230) esp_image: segment 5: paddr=000cf050 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (239) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (239) boot: Disabling RNG early entropy source...[0m
+[0;32mI (249) cpu_start: Multicore app[0m
+[0;32mI (259) cpu_start: Pro cpu start user code[0m
+[0;32mI (259) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (259) app_init: Application information:[0m
+[0;32mI (259) app_init: Project name:     McHacks[0m
+[0;32mI (263) app_init: App version:      7f13f7a-dirty[0m
+[0;32mI (267) app_init: Compile time:     Jan 17 2026 18:38:39[0m
+[0;32mI (272) app_init: ELF file SHA256:  e767806b1...[0m
+[0;32mI (276) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (281) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (285) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (289) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (292) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (299) heap_init: At 3FCA28B8 len 00046E58 (283 KiB): RAM[0m
+[0;32mI (304) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (309) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (314) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (320) spi_flash: detected chip: gd[0m
+[0;32mI (323) spi_flash: flash io: dio[0m
+[0;33mW (326) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (338) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (348) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (354) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (361) coexist: coex firmware version: b0bcc39[0m
+[0;32mI (365) coexist: coexist rom version e7ae62f[0m
+[0;32mI (369) main_task: Started on CPU0[0m
+[0;32mI (379) main_task: Calling app_main()[0m
+[0;32mI (379) uart: queue free spaces: 10[0m
+[0;32mI (389) BLE_INIT: BT controller compile version [2edb0b0][0m
+[0;32mI (389) BLE_INIT: Using main XTAL as clock source[0m
+[0;32mI (389) BLE_INIT: Feature Config, ADV:1, BLE_50:1, DTM:1, SCAN:1, CCA:0, SMP:1, CONNECT:1[0m
+[0;32mI (399) BLE_INIT: Bluetooth MAC: 80:b5:4e:c3:7b:4e[0m
+[0;32mI (399) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (439) GATTC_SPP_DEMO: client_app_main init bluetooth[0m
+[0;32mI (459) GATTC_SPP_DEMO: register callback[0m
+[0;32mI (459) GATTC_SPP_DEMO: GATT client register, status 0, app_id 0, gattc_if 3[0m
+[0;32mI (459) GATTC_SPP_DEMO: Scanning start successfully[0m
+[0;32mI (469) GATTC_SPP_DEMO: Scan result, device f0:b0:62:a8:89:93, name len 0[0m
+[0;32mI (469) GATTC_SPP_DEMO: Scan result, device d8:3b:da:49:b8:5e, name len 14[0m
+[0;32mI (479) GATTC_SPP_DEMO: ESP_SPP_SERVER[0m
+[0;32mI (479) GATTC_SPP_DEMO: Connect to the remote device.[0m
+[0;32mI (489) GATTC_SPP_DEMO: Scanning stop successfully[0m
+[0;32mI (589) GATTC_SPP_DEMO: Connected, conn_id 0, remote d8:3b:da:49:b8:5e[0m
+[0;32mI (589) GATTC_SPP_DEMO: Open successfully, MTU 23[0m
+ESP_ERROR_CHECK failed: esp_err_t 0xffffffff (ESP_FAIL) at 0x42057e3c
+file: "./components/MP6050/mp6050.cpp" line 62
+func: IMU_DATA imu_read()
+expression: i2c_master_cmd_begin(I2C_NUM_0, cmd, 1000 / portTICK_PERIOD_MS)
+
+abort() was called at PC 0x40381077 on core 0
+
+
+Backtrace: 0x403810b9:0x3fca6320 0x40381081:0x3fca6340 0x40387e01:0x3fca6360 0x40381077:0x3fca63d0 0x42057e3c:0x3fca6400 0x4200d5d2:0x3fca6440 0x4200d616:0x3fca6470 0x42080a74:0x3fca6490 0x40381d79:0x3fca64c0
+
+
+
+
+ELF file SHA256: e767806b1
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40381208
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jan 17 2026 13:27:46[0m
+[0;32mI (24) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=231b4h (143796) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=000331dc vaddr=3fc9ad00 size=03de0h ( 15840) load[0m
+[0;32mI (115) esp_image: segment 2: paddr=00036fc4 vaddr=40374000 size=09054h ( 36948) load[0m
+[0;32mI (124) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=813ech (529388) map[0m
+[0;32mI (217) esp_image: segment 4: paddr=000c1414 vaddr=4037d054 size=0dc34h ( 56372) load[0m
+[0;32mI (230) esp_image: segment 5: paddr=000cf050 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (239) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (239) boot: Disabling RNG early entropy source...[0m
+[0;32mI (249) cpu_start: Multicore app[0m
+[0;32mI (259) cpu_start: Pro cpu start user code[0m
+[0;32mI (259) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (259) app_init: Application information:[0m
+[0;32mI (259) app_init: Project name:     McHacks[0m
+[0;32mI (263) app_init: App version:      7f13f7a-dirty[0m
+[0;32mI (267) app_init: Compile time:     Jan 17 2026 18:38:39[0m
+[0;32mI (272) app_init: ELF file SHA256:  e767806b1...[0m
+[0;32mI (276) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (281) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (285) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (289) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (292) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (299) heap_init: At 3FCA28B8 len 00046E58 (283 KiB): RAM[0m
+[0;32mI (304) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (309) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (314) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (320) spi_flash: detected chip: gd[0m
+[0;32mI (323) spi_flash: flash io: dio[0m
+[0;33mW (326) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (338) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (348) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (354) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (361) coexist: coex firmware version: b0bcc39[0m
+[0;32mI (365) coexist: coexist rom version e7ae62f[0m
+[0;32mI (369) main_task: Started on CPU0[0m
+[0;32mI (379) main_task: Calling app_main()[0m
+[0;32mI (379) uart: queue free spaces: 10[0m
+[0;32mI (389) BLE_INIT: BT controller compile version [2edb0b0][0m
+[0;32mI (389) BLE_INIT: Using main XTAL as clock source[0m
+[0;32mI (389) BLE_INIT: Feature Config, ADV:1, BLE_50:1, DTM:1, SCAN:1, CCA:0, SMP:1, CONNECT:1[0m
+[0;32mI (399) BLE_INIT: Bluetooth MAC: 80:b5:4e:c3:7b:4e[0m
+[0;32mI (399) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (439) GATTC_SPP_DEMO: client_app_main init bluetooth[0m
+[0;32mI (459) GATTC_SPP_DEMO: register callback[0m
+[0;32mI (459) GATTC_SPP_DEMO: GATT client register, status 0, app_id 0, gattc_if 3[0m
+[0;32mI (459) GATTC_SPP_DEMO: Scanning start successfully[0m
+[0;32mI (469) GATTC_SPP_DEMO: Scan result, device d8:3b:da:49:b8:5e, name len 14[0m
+[0;32mI (469) GATTC_SPP_DEMO: ESP_SPP_SERVER[0m
+[0;32mI (479) GATTC_SPP_DEMO: Connect to the remote device.[0m
+[0;32mI (479) GATTC_SPP_DEMO: Scanning stop successfully[0m
+[0;32mI (479) GATTC_SPP_DEMO: Scan result, device 56:a4:58:09:0f:f2, name len 0[0m

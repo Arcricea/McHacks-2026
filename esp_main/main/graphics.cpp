@@ -181,12 +181,18 @@ void graphics_main() {
       break;
     }
 
-    uint16_t x = 120 + (g_imu_data.gyro_z * 120 / 20000);
-    uint16_t y = 160 + (g_imu_data.gyro_y * 160 / 20000);
+    // Device 0 - green circle
+    uint16_t x0 = 120 + (g_imu_data[0].gyro_z * 120 / 20000);
+    uint16_t y0 = 160 + (g_imu_data[0].gyro_y * 160 / 20000);
+
+    // Device 1 - blue circle
+    uint16_t x1 = 120 + (g_imu_data[1].gyro_z * 120 / 20000);
+    uint16_t y1 = 160 + (g_imu_data[1].gyro_y * 160 / 20000);
 
     drawBuffer->fillScreen(drawBuffer->color565(r, g, b));
     hue += 1;
-    drawBuffer->drawCircle(x, y, 10, drawBuffer->color565(100, 255, 100));
+    drawBuffer->drawCircle(x0, y0, 10, drawBuffer->color565(100, 255, 100));
+    drawBuffer->drawCircle(x1, y1, 10, drawBuffer->color565(100, 100, 255));
 
     drawBuffer->pushSprite(&lcd, 0, 0);
 

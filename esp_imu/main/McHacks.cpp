@@ -7,6 +7,9 @@
 #include <stdint.h>
 #include <stdio.h>
 
+// Change this to 1 for the second IMU device
+#define DEVICE_ID 1
+
 void imu_main();
 extern "C" int app_main() {
   client_app_main();
@@ -17,7 +20,9 @@ extern "C" int app_main() {
 void imu_main() {
   imu_init();
   while (1) {
-    custom_queue_add(imu_read());
+    IMU_DATA data = imu_read();
+    data.device_id = DEVICE_ID;
+    custom_queue_add(data);
     vTaskDelay(20 / portTICK_PERIOD_MS);
   }
 }
